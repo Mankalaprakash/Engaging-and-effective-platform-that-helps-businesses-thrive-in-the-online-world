@@ -1,0 +1,163 @@
+<html>
+        <head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="home-1.css">
+        </head>     
+        <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+            <img src="./Larsen-Toubro.jpg" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aboutus_2.html">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="portfoliopages.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="great.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactuspage.html">contact us</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="location.html">Location</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="apointment.html">apointment</a>
+                  </li>
+              </ul>
+              <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" id="searchInput" placeholder="Search..."  aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" onclick="search()">Search</button>
+              </form> -->
+              <input type="text" id="searchInput" placeholder="Search for branches" >
+              <button onclick="search()" ><img src="https://www.freeiconspng.com/uploads/search-icon-png-8.png" class="search-icon-top"  /></button>
+          </nav>
+          <div id="suggestions"></div>
+          <div id="details">
+            <h2 class="heading">Details</h2>
+            <p id="detailsContent" class="heading"></p>
+        </div>
+        <h1>L&T CONSTRUCTIONS</h1>
+<p>As L&T Construction, the construction arm of L&T, we are India's largest construction organization and ranked among the world's top contractors. We contribute significantly to build the image and stature of L&T across the world and drive L&T's reputation as 'the builder of the India of the 21st century' by offering EPC solutions to execute large industrial and infrastructure projects from concept to commissioning on a turnkey basis with single-source responsibility. Our multiple businesses encompass distinct but complementary capabilities, that address different segments of infrastructure and industry.</p> 
+<h1>OUR BOARD MEMBERS</h1>
+<div class="photo-container">
+  <div class="photo-item">
+      <img src="1.jpg" alt="Photo 1" width="200" height="200">
+      <p class="photo-name">A. M. Naik</p>
+  </div>
+  <div class="photo-item">
+      <img src="sn.jpg" alt="Photo 2" width="200" height="200">
+      <p class="photo-name">S. N. Subrahmanyan</p>
+  </div>
+  <div class="photo-item">
+    <img src="ss.jpg" alt="Photo 3" width="200" height="200">
+    <p class="photo-name">Subramanian Sarma</p>
+</div>
+          <script>
+            // Mock data for suggestions and details (replace with your own data)
+            const data = [
+            { name: "Ahmedabad", details: "501, Sakar Complex I,Ashram Road,Ahmedabad,PIN - 380 009,Tel:079-4900 4000,Fax: 079-2658 0491" },
+                { name: "Chandigarh", details: "The Statement Office,2nd Floor, Plot No. 149, Industrial & Business Park, Phase-I,Chandigarh – 160 002,Tel: 0172-464 6846,Fax: 0172-464 6802" },
+                { name: "New Delhi", details: "32, Shivaji Marg,New Delhi,PIN - 110 015,Tel:011-4081 9500,Fax:011-4081 9600" },
+                { name: "hyderabad",details:"5-10-173 Fateh Maidan Road,2nd Floor Vasantha Chambers,Hyderabad 500 004,Tel No: 040-4757 5100,Fax: 040-2324 2356"},
+                { name: "Nagpur",details:"12 Shivaji Nagar,North Ambazari Road,Nagpur,PIN - 440 010Tel: 0712-226 0001Fax: 0712-226 0020 / 30"},
+                { name: "Bangalore",details:"38 Cubbon Road, BangalorePIN - 560 001,Tel: 080-46136103,Fax: 080-2559 6397"},
+                { name: "Chennai",details:"2nd Floor, TC 1 Building,Mount Poonamallee Road, Manapakkam,Chennai,PIN - 600 089 Tel: 044-4070 6868 Fax: 044-4070 6930"},
+                { name: "Kolkata",details:"3B Shakespeare Sarani,Kolkata,PIN - 700 071 ,Tel: 033-4408 6001,Fax: 033-2282 102"},
+                { name: "Pune",details:"191/1 Dhole Patil Road, PunePIN - 411 001Tel: 020-4854 3333  Fax: 020-2612 9579"},
+                // Add more items here
+            ];
+    
+            function showSuggestions(inputValue) {
+                const suggestionsContainer = document.getElementById("suggestions");
+                suggestionsContainer.innerHTML = "";
+    
+                if (inputValue.length === 0) {
+                    suggestionsContainer.style.display = "none";
+                    return;
+                }
+    
+                // Filter suggestions based on input value
+                const filteredSuggestions = data.filter(item => {
+                    return item.name.toLowerCase().includes(inputValue.toLowerCase());
+                });
+    
+                // Display matching suggestions
+                filteredSuggestions.forEach(item => {
+                    const suggestionItem = document.createElement("div");
+                    suggestionItem.className = "suggestion-item";
+                    suggestionItem.textContent = item.name;
+    
+                    // Handle suggestion click event
+                    suggestionItem.addEventListener("click", function() {
+                        // Show details for the selected suggestion
+                        showDetails(item);
+                    });
+    
+                    suggestionsContainer.appendChild(suggestionItem);
+                });
+    
+                suggestionsContainer.style.display = "block";
+            }
+    
+            function showDetails(item) {
+                const detailsContainer = document.getElementById("details");
+                const detailsContent = document.getElementById("detailsContent");
+    
+                // Update details content
+                detailsContent.textContent = item.details;
+    
+                // Show the details container
+                detailsContainer.style.display = "block";
+            }
+    
+            function search() {
+                const searchInput = document.getElementById("searchInput");
+                const inputValue = searchInput.value;
+    
+                // Find the selected item by name (assuming names are unique)
+                const selectedItem = data.find(item => item.name.toLowerCase() === inputValue.toLowerCase());
+    
+                if (selectedItem) {
+                    // Show details for the selected item
+                    showDetails(selectedItem);
+                } else {
+                    // No matching item found, hide details
+                    const detailsContainer = document.getElementById("details");
+                    detailsContainer.style.display = "none";
+                }
+            }
+        </script>
+        
+        <div class="footer">
+
+          &copy; 2023 L&T CONSTRUCTIONS Copyright & Terms       PrivacyPolicy    Sitemap
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+      </div>
+      <div class="address-containe">
+        <h2>OUR ADDRESS</h2>
+        <br>Larsen & Toubro Limited Mount Poonamallee Road</br>
+        <br>Manapakkam, P.B.No.979 Chennai - 600 089</br>
+        <br>Toll Free(India): 1800 209 4544 Available from: 8 am to 8 pm IST</br>
+        <br>Send us a mail: infodesk@larsentoubro.com / info@lntecc.com</br>
+</div>
+        </body>
+</html>

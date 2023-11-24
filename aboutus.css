@@ -1,0 +1,97 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color:#fff;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+.logo{
+    width: 50px;
+}
+header {
+    background-color: orange;
+    color:orange;
+    text-align: center;
+    padding: 40px 0;
+}
+.body{
+    background-color: coral;
+    text-align: center;
+
+
+}
+.p{
+    font-family: sans-serif;
+    color: #fff;
+    font-size: medium;
+}
+.parent{
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    text-align: centerss;
+}
+
+header h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 20px 0;
+}
+.img{
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-weight: 300px;
+    text-shadow: 400px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+.project img {
+    max-width: 100%;
+    height:auto;
+    color: red;
+    font-weight: 400px;
+    text-shadow: 400px;
+}
+
+footer {
+    background-color:green;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
